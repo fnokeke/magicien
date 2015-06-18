@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo "vimrc copied"
+cp $HOME/.vimrc $HOME/magicien/vimrc
+
+echo "tmux copied"
+cp $HOME/.tmux.conf $HOME/magicien/tmux.conf
