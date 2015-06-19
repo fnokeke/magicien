@@ -1,0 +1,22 @@
+#! /bin/bash
+
+function install() {
+	cd ~/.vim/bundle && \
+		git clone $1
+}
+
+# pathogen
+# mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+# 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# echo "execute pathogen#infect()" >> $HOME/.vimrc
+
+# powerline
+install https://github.com/powerline/powerline.git
+
+# nerdtree
+install https://github.com/scrooloose/nerdtree.git
+
+# syntastic
+install https://github.com/scrooloose/syntastic.git
+
+echo "Vim-plugins installation complete."
