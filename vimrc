@@ -4,15 +4,17 @@
 " --enable-rubyinterp --prefix=/usr --enable-ruby
 " Get latest from: http://github.com/lucasoman/Conf/raw/master/.vimrc
 
-" load pathogen
+" load pathogen {{{
 call pathogen#infect()
+"}}}
 
 "set t_Co=256
 
-" disable automatic commenting
+" disable automatic commenting {{{
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" }}}
 
-" misc options
+" misc options {{{
 " {{{ interface
 " lines, cols in status line
 set ruler
@@ -211,11 +213,12 @@ let Tlist_Show_One_File = 1
 let html_use_css = 1
 "}}}
 
-" mappings
-" fold for python
+" mappings "{{{
+
+" fold for python {{{
 nmap :pp :set foldmethod=indent
 nmap :npp :set foldmethod=marker
-
+"}}}
 " {{{ general
 let mapleader = "\\"
 " easier move screen up/down
@@ -482,3 +485,14 @@ fun! MoveTab(n)
 	exe "tabm ".which
 endfunction
 "}}}
+
+" vim plugin settings 
+" syntastic settings " {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
