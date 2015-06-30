@@ -20,3 +20,6 @@ install https://github.com/scrooloose/nerdtree.git
 install https://github.com/scrooloose/syntastic.git
 
 echo "Vim-plugins installation complete."
+
+# livedown (markdown preview)
+npm install -g livedown
