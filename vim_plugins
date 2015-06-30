@@ -22,4 +22,5 @@ install https://github.com/scrooloose/syntastic.git
 echo "Vim-plugins installation complete."
 
 # livedown (markdown preview)
-npm install -g livedown
+sudo yum install npm
+sudo npm install -g livedown
