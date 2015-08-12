@@ -24,3 +24,4 @@ echo "Vim-plugins installation complete."
 # livedown (markdown preview)
 sudo yum install npm
 sudo npm install -g livedown
+install git://github.com/shime/vim-livedown.git
