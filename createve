@@ -1,9 +1,0 @@
-#! /bin/bash
-
-virtualenv $1
-echo "source $1/bin/activate" > .env
-
-echo "========================"
-echo "         DONE           "
-echo "========================"
-

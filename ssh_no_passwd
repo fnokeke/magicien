@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [ $# -eq 1 ]; then
+	echo "copying public key to $1..."
+else 
+	echo "Usage: ssh_no_passwd [username@host]"
+	exit 1
+fi
+ssh-copy-id -i ~/.ssh/id_rsa.pub $1
