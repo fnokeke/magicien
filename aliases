@@ -1,1 +1,66 @@
-/Users/fnokeke/.aliases
+# dir
+alias dev='cd $HOME/dev'
+alias desk='cd $HOME/Desktop'
+alias vm='cd $HOME/host/'
+
+# terminal
+alias lsl='ls -l'
+
+# vim
+alias ovim='vim $HOME/.vimrc'
+alias svim='source $HOME/.vimrc'
+
+# zsh 
+alias ozshrc="vim $HOME/.zshrc"
+alias szshrc='source $HOME/.zshrc'
+alias oohmyzsh="vim $HOME/.oh-my-zsh"
+alias sohmyzsh="source $HOME/.oh-my-zsh"
+
+# alias
+alias oalias='vim $HOME/.aliases'
+alias salias='source $HOME/.aliases'
+
+# tmux 
+alias otmux='vim $HOME/.tmux.conf'
+alias stmux='tmux source-file $HOME/.tmux.conf'
+
+# eclipse
+alias eclipse='open $HOME/eclipse/java-mars/Eclipse.app'
+
+# dropbox config
+alias dropboxcfg='cd $HOME/Dropbox/Public/configs'
+
+# jupyter
+alias jyp='jupyter notebook --script'
+
+# ssh
+alias sshslm='ssh -t fabian@slm.smalldata.io "cd /home/fabian/slm2.0 ; bash;"'
+alias sshdev='ssh -t fabian@slm.smalldata.io "cd /home/fabian/ongoing-slm-dev ; bash;"'
+alias sshgmat='ssh -t fabian@slm.smalldata.io "cd /home/ec2-user/projects/gmat_collector ; bash;"'
+alias sshviz='ssh -t fabian@slm.smalldata.io "cd /home/ec2-user/projects/slm_histviz ; bash;"'
+alias sshmyweb='ssh -t fnokeke@tiger.cs.cornell.edu "cd /home/WIN/fnokeke/MyWeb ; bash"'
+
+# github aliases
+alias gtp='git push origin master'
+alias gta='git add .'
+alias gtb='git branch'
+alias gtd='git diff'
+alias gtl='git log'
+alias gts='git status'
+gtc() {git commit -m '"$1"';}
+
+
+# list port usage
+lpp() {
+	lsof -i:$1 | awk '{print $1 "      "$2}' #space b/w cols
+}
+
+# kill programs using port
+kpp() {
+	kill -9 $(lsof -i:$1 -t)
+}
+
+# trash
+alias ot='jo ~/.Trash'
+alias et='rm -rf ~/.Trash'
+trash() { mv '$@' ~/.Trash/; }
